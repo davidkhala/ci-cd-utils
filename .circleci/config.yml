@@ -1,0 +1,17 @@
+version: 2 # use CircleCI 2.0
+jobs:
+  build: # runs not using Workflows must have a `build` job as entry point
+    machine:
+      image: ubuntu-1604:201903-01
+    steps:
+      - checkout # check out source code to working directory
+      - run:
+          name: machine node version reconfigure
+          command: ./.circleci/helper.sh nvm8;
+      - run:
+          command: node --version;which node
+      - run:
+          name: env fix
+          command: ./.circleci/helper.sh envFix;
+      - run:
+          command: cd $CIRCLE_WORKING_DIRECTORY; echo $PWD;
