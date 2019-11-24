@@ -14,6 +14,15 @@ Exited with code 1
 ```
 ## Travis
 - `sudo npm` is not supported, use `npm` directly
+- specify golang version in `matrix` is not supported 
+  ```
+  [This is illegal]
+  matrix:
+    include:
+      - language: golang
+        go:
+          - 1.12.x
+  ```
 ## TeamCity
 - remainings kept in local deploy. 
 - no build job logs 
