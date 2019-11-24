@@ -14,15 +14,15 @@ Exited with code 1
 ```
 ## Travis
 - `sudo npm` is not supported, use `npm` directly
-- specify golang version in `matrix` is not supported 
+- specify golang version with default format for version 1.12+ is not supported 
   ```
-  [This is illegal]
-  matrix:
-    include:
-      - language: golang
-        go:
-          - 1.12.x
+  [This is effectless]
+  language: golang
+  go:
+    - 1.12.x
   ```
+  **try `eval "$(gimme 1.12.x)"` before install section**
+  
 ## TeamCity
 - remainings kept in local deploy. 
 - no build job logs 
