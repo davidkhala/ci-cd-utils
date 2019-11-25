@@ -14,14 +14,7 @@ Exited with code 1
 ```
 ## Travis
 - `sudo npm` is not supported, use `npm` directly
-- specify golang version with default format for version 1.12+ is not supported 
-  ```
-  [This is effectless]
-  language: golang
-  go:
-    - 1.12.x
-  ```
-  **try `eval "$(gimme 1.12.x)"` before install section**
+- **run`eval "$(gimme 1.12.x)"` for non-golang build to change preinstalled go version**
   
 ## TeamCity
 - remainings kept in local deploy. 
