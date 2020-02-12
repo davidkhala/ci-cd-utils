@@ -15,6 +15,7 @@ Exited with code 1
 ## Travis
 - `sudo npm` is not supported, use `npm` directly
 - **run`eval "$(gimme 1.12.x)"` for non-golang build to change preinstalled go version**
+- current working directory change is cached in following instruction line, the $PWD live even across major stage like `install`,`script`
   
 ## TeamCity
 - remainings kept in local deploy. 
