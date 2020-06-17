@@ -17,7 +17,7 @@ Continuous integration and continuous delivery tools collection
 
 ## Azure pipelines 
 
-[![Build Status](https://dev.azure.com/david-khala/ci-cd-utils/_apis/build/status/Merge?branchName=master)](https://dev.azure.com/david-khala/ci-cd-utils/_build?branchName=master&definitionId=1)
+[![Build Status](https://dev.azure.com/david-khala/ci-cd-utils/_apis/build/status/Merge?branchName=master)](https://dev.azure.com/david-khala/ci-cd-utils/_build?branchName=master)
 
 
 ### TODO
