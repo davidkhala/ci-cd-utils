@@ -15,3 +15,5 @@ Continuous integration and continuous delivery tools collection
 ## Github Actions
 
 ## Azure pipelines
+### TODO
+- how to add a pipeline status badge
