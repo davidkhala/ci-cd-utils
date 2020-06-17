@@ -2,7 +2,7 @@
 
 Continuous integration and continuous delivery tools collection
 
-## [CircleCI](./CircleCI.md) [![CircleCI](https://circleci.com/gh/davidkhala/ci-cd-utils/tree/master.svg?style=svg)](https://circleci.com/gh/davidkhala/ci-cd-utils/tree/master)
+## [CircleCI](./CircleCI.md)
 
 
 ## [Travis](./Travis.md)

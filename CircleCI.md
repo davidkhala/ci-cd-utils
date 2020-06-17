@@ -1,4 +1,5 @@
 # CircleCI
+ [![CircleCI](https://circleci.com/gh/davidkhala/ci-cd-utils/tree/master.svg?style=svg)](https://circleci.com/gh/davidkhala/ci-cd-utils/tree/master)
 - available docker public image: https://circleci.com/docs/2.0/circleci-images/
 - checkout another private project in [`run.command`](https://circleci.com/docs/2.0/gh-bb-integration/#enable-your-project-to-check-out-additional-private-repositories), we will need access right 'admin:public_key' granted to cicleCI
 - [sequential jobs](https://circleci.com/docs/2.0/workflows/#sequential-job-execution-example)
@@ -9,3 +10,4 @@ cd $CIRCLE_WORKING_DIRECTORY;
 Exited with code 1
 ```
 - There is no automatic status badge generator
+    - [Adding Status Badges](https://circleci.com/docs/2.0/status-badges/)
