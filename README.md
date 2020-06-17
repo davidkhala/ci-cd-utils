@@ -16,7 +16,7 @@ Continuous integration and continuous delivery tools collection
 ## Github Actions
 
 ## Azure pipelines 
-https://dev.azure.com/david-khala/ci-cd-utils/_apis/build/repos/Github/badge?api-version=5.1-preview.2&branchName=master&repoId=davidkhala/ci-cd-utils.svg
+[![azp](https://dev.azure.com/david-khala/ci-cd-utils/_apis/build/repos/Github/badge?api-version=5.1-preview.2&branchName=master&repoId=davidkhala/ci-cd-utils)](./)
 
 ### TODO
 - how to add a pipeline status badge
