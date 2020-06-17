@@ -8,3 +8,4 @@ cd $CIRCLE_WORKING_DIRECTORY;
 /bin/bash: line 0: cd: ~/project: No such file or directory
 Exited with code 1
 ```
+- There is no automatic status badge generator
