@@ -17,8 +17,7 @@ Continuous integration and continuous delivery tools collection
 
 ## Azure pipelines 
 
-[![Build Status](https://dev.azure.com/david-khala/ci-cd-utils/_apis/build/status/Merge?branchName=master)](https://dev.azure.com/david-khala/ci-cd-utils/_build?branchName=master)
-
+[![Build Status](https://dev.azure.com/david-khala/ci-cd-utils/_apis/build/status/davidkhala.ci-cd-utils?branchName=master)](https://dev.azure.com/david-khala/ci-cd-utils/_build/latest?definitionId=1&branchName=master)
 
 ### TODO
 - how to add a pipeline status badge
