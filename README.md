@@ -13,7 +13,7 @@ Continuous integration and continuous delivery tools collection
 - remainings kept in local deploy. 
 - no build job logs 
 
-## Github Actions
+## Github Workflow
 
 ## Azure pipelines 
 
