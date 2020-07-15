@@ -1,6 +1,6 @@
 # Github Workflow
 
-![](https://github.com/davidkhala/ci-cd-utils/workflows/githubWorkflow.yml/badge.svg)
+![](https://github.com/davidkhala/ci-cd-utils/workflows/.github/workflows/githubWorkflow.yml/badge.svg)
 ## Badge URL syntax
 If your workflow uses the name keyword, you must reference the workflow by name. 
 
