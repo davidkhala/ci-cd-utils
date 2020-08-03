@@ -14,3 +14,4 @@ Large files that are quick to install but slow to download do not benefit from c
     Compiled binaries
     Docker images
     ```
+- Do not currently support use of Docker on macOS
