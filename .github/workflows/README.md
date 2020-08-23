@@ -1,6 +1,9 @@
 # Github Workflow
 
 ![githubWorkflow.yml](https://github.com/davidkhala/ci-cd-utils/workflows/.github/workflows/githubWorkflow.yml/badge.svg?branch=master)
+
+- [self-hosted support](https://docs.github.com/en/actions/hosting-your-own-runners/about-self-hosted-runners)
+
 ## Badge 
 
 ### URL Syntax
