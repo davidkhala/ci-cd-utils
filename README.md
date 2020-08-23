@@ -18,4 +18,4 @@ Continuous integration and continuous delivery tools collection
 ## [Azure Pipelines](./Azure.md)
 
 ### TODO
-- Github Workflow
+- **appveyor**
