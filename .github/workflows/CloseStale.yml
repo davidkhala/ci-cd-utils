@@ -2,6 +2,7 @@ name: StaleProcess
 
 # Controls when the action will run. 
 on:
+  push:
   schedule:
     - cron: '0 0 * * 0' # https://crontab.guru/#0_0_*_*_0
 
@@ -17,7 +18,7 @@ jobs:
 
     - uses: actions/stale@v3
       with:
-        # Token for the repository. Can be passed in using `{{ secrets.GITHUB_TOKEN }}`.
+        # Token for the repository to grant access to this stale bot action
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         # The message to post on the issue when tagging it. If none provided, will not mark issues stale.
         stale-issue-message: Marked as stale issue. Will be closed later if no activity for a while. 
