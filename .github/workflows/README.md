@@ -19,3 +19,6 @@
 
 ### Easy to get URL
 - Repository tab `Actions` -> Select a workflow (listed at left) -> [Create status badge] button (upper-right of workflow details) -> Event: default
+
+### Awesome actions
+- https://github.com/actions/checkout
