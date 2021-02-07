@@ -22,3 +22,8 @@
 
 ### Awesome actions
 - https://github.com/actions/checkout
+
+### Triggers
+- Manual events
+  - `workflow_dispatch` to trigger specific workflows in a repository
+  - `repository_dispatch` to trigger more than one workflow in a repository and create custom events and event types
