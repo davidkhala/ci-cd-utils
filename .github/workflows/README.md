@@ -3,7 +3,8 @@
 ![githubWorkflow.yml](https://github.com/davidkhala/ci-cd-utils/workflows/.github/workflows/githubWorkflow.yml/badge.svg?branch=master)
 
 - [self-hosted support](https://docs.github.com/en/actions/hosting-your-own-runners/about-self-hosted-runners)
-
+  - Step 1: [Adding self hosted runners](https://docs.github.com/en/actions/hosting-your-own-runners/adding-self-hosted-runners)
+    - Settings -> Actions
 ## Badge 
 
 ### URL Syntax
