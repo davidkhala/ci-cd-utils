@@ -1,5 +1,8 @@
 # Azure Pipelines
 
+## Deprecation notice
+AZP is giving its way to Github Workflow, please keep eye on future migration guideline
+
 ## Notes
 - Way to add this badge
     - [Pipelines -> Pipelines](https://dev.azure.com/david-khala/ci-cd-utils/_build)

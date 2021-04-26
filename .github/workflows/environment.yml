@@ -1,4 +1,4 @@
-name: prebuilt in Github workflow environment
+name: pre-install software in GHA runner
 
 # Controls when the action will run. 
 on: [push, workflow_dispatch]
@@ -15,14 +15,15 @@ jobs:
       # https://github.com/actions/virtual-environments/issues/17#issuecomment-730816023
       - uses: docker-practice/actions-setup-docker@master
         if: ${{ matrix.os == 'macos-latest' }}
-      - name: docker pre-built
+      - name: docker pre-install
         run: docker --version
-      - name: mysql prebuilt
+      - name: mysql pre-install
         run: mysql -V
         if: ${{ matrix.os != 'macos-latest' }}
-      - name: java pre-built
+      - name: java pre-install
         run: java -version
-        
+      - name: python pre-install
+        run: python --version
       - name: node pre-built
         run: node --version
       - name: go pre-built
