@@ -22,8 +22,10 @@
 ### Easy to get URL
 - Repository tab `Actions` -> Select a workflow (listed at left) -> [Create status badge] button (upper-right of workflow details) -> Event: default
 
-### Awesome actions
+### Github Actions: self-lift OpenSource 
 - https://github.com/actions/checkout
+- https://github.com/actions/virtual-environments
+  - Github hosted runner
 
 ### Triggers
 - Manual events
