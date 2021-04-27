@@ -21,8 +21,8 @@ jobs:
         run: mysql -V
         if: ${{ matrix.os != 'macos-latest' }}
       - name: java pre-built
-        run: java --version
-        if: ${{ matrix.os != 'windows-latest' }} ## TODO test powershell java
+        run: java -version
+        
       - name: node pre-built
         run: node --version
       - name: go pre-built
