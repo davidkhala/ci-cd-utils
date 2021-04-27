@@ -21,7 +21,7 @@ jobs:
         run: mysql -V
         if: ${{ matrix.os != 'macos-latest' }}
       - name: java pre-built
-        run: java --version
+        run: java # TODO test on windows
       - name: node pre-built
         run: node --version
       - name: go pre-built
