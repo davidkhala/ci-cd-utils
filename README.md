@@ -19,3 +19,4 @@ Continuous integration and continuous delivery tools collection
 
 ### TODO
 - **appveyor**
+- Oracle **wercker**
