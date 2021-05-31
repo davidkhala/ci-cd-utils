@@ -11,7 +11,8 @@ Continuous integration and continuous delivery tools collection
   
 ## TeamCity
 - remainings kept in local deploy. 
-- no build job logs 
+- no build job logs
+- Use case: OCI
 
 ## [Github Workflow](./.github/workflows/README.md)
 
