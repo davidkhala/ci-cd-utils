@@ -16,6 +16,7 @@
     - 14 GB of RAM memory
     - 14 GB of SSD disk space
   - The GitHub-hosted runner application is a fork of the Azure Pipelines Agent. Inbound ICMP packets are blocked for all Azure virtual machines, so ping or traceroute commands might not work. 
+  - To get a list of IP address ranges that GitHub Actions uses for GitHub-hosted runners, you can use the GitHub REST API. The list of GitHub Actions IP addresses returned by the API is updated once a week.
 
 - Get Badge
   - Repository tab `Actions` -> Select a workflow (listed at left) -> [Create status badge] button (upper-right of workflow details) -> Event: default
