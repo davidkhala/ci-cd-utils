@@ -17,7 +17,3 @@ Continuous integration and continuous delivery tools collection
 ## [Github Workflow](./.github/workflows/README.md)
 
 ## [Azure Pipelines](./Azure.md)
-
-### TODO
-- **appveyor**
-- Oracle **wercker**
