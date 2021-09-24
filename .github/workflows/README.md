@@ -28,6 +28,10 @@ To find this information in the workflow log,
 2. Under that section, expand the `Virtual Environment` section. 
 3. The link following `Included Software` will tell you the the preinstalled tools on the runner that ran the workflow.
 
+Or you can go to some readme collections in source.
+- [Ubuntu 20](https://github.com/davidkhala/virtual-environments/blob/main/images/linux/Ubuntu2004-README.md)
+- [MacOS 11](https://github.com/davidkhala/virtual-environments/blob/main/images/macos/macos-11-Readme.md)
+- [Windows Server 2022](https://github.com/davidkhala/virtual-environments/blob/main/images/win/Windows2022-Readme.md)
 ### Github Actions: self-lift OpenSource 
 - https://github.com/actions/checkout
 - https://github.com/actions/virtual-environments
