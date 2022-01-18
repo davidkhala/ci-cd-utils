@@ -14,7 +14,10 @@ jobs:
       matrix:
         os: [macos-latest, ubuntu-latest, windows-latest]
     runs-on: ${{ matrix.os }}
+    env:
+      LAYER: Job
     steps:
+      - run: echo $LAYER
       - uses: actions/checkout@v2
       # https://github.com/actions/virtual-environments/issues/17#issuecomment-730816023
       - uses: docker-practice/actions-setup-docker@master
