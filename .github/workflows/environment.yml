@@ -14,8 +14,7 @@ jobs:
       LAYER: Job
     steps:
       - run: echo $LAYER
-      - uses: actions/checkout@v2
-      # https://github.com/actions/virtual-environments/issues/17#issuecomment-730816023
+      - uses: actions/checkout@main
       - uses: docker-practice/actions-setup-docker@master
         if: ${{ matrix.os == 'macos-latest' }}
       - name: docker pre-install
@@ -30,4 +29,7 @@ jobs:
       - name: node pre-built
         run: node --version
       - name: go pre-built
+        run: go version
+      - uses: actions/setup-go@v2
+      - name: after setup Golang
         run: go version
