@@ -31,5 +31,6 @@ jobs:
       - name: go pre-built
         run: go version
       - uses: actions/setup-go@v2
+        # When no go versions are set in workflow file, the default version in GitHub hosted runner is used.
       - name: after setup Golang
         run: go version
