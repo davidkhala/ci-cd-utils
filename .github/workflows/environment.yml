@@ -13,7 +13,6 @@ jobs:
     env:
       LAYER: Job
     steps:
-      - run: echo $LAYER
       - uses: actions/checkout@main
       - uses: docker-practice/actions-setup-docker@master
         if: ${{ matrix.os == 'macos-latest' }}
