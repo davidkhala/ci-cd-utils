@@ -10,8 +10,6 @@ jobs:
       matrix:
         os: [macos-latest, ubuntu-latest, windows-latest]
     runs-on: ${{ matrix.os }}
-    env:
-      LAYER: Job
     steps:
       - uses: actions/checkout@main
       - uses: docker-practice/actions-setup-docker@master
