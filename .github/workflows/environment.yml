@@ -20,7 +20,7 @@ jobs:
       - name: Dump matrix context
         run: echo '${{ toJSON(matrix) }}'
       - name: default environments in https://docs.github.com/en/actions/learn-github-actions/environment-variables
-        run: echo "CI=${CI}; GITHUB_ACTION_REPOSITORY=${GITHUB_ACTION_REPOSITORY}"
+        run: echo "CI=${CI};GITHUB_EVENT_NAME=${GITHUB_EVENT_NAME}; ${GITHUB_ACTOR}~=${GITHUB_REPOSITORY_OWNER}; GITHUB_REPOSITORY=${GITHUB_REPOSITORY}"
           
   viewPrebuiltVersion:
     strategy:
