@@ -20,10 +20,8 @@ jobs:
       - name: Dump matrix context
         run: echo '${{ toJSON(matrix) }}'
       - name: default environments in https://docs.github.com/en/actions/learn-github-actions/environment-variables
-        run: |
-          echo ${{env.GITHUB_REPOSITORY}};
-          echo ${GITHUB_REPOSITORY};
-          echo ${{GITHUB_REPOSITORY}}
+        run: echo ${{env.GITHUB_REPOSITORY}};
+          
   viewPrebuiltVersion:
     strategy:
       matrix:
