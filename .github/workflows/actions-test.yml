@@ -1,4 +1,4 @@
-name: pre-install software in GHA runner
+name: actions-syntax-test
 
 # Controls when the action will run. 
 on: workflow_dispatch
