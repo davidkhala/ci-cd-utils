@@ -1,15 +1,15 @@
+name: on push tags
 on:
   push:
     tags:
       - "v*.*.*"
 jobs:
   
-  build-and-release-binary:
+  release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: echo ${{ github.event.push.ref }}
       - name: Release
-        if: startsWith(github.event.push.ref, 'refs/tags/')
+        if: startsWith(github.event.ref, 'refs/tags/')
         uses: softprops/action-gh-release@master
         
