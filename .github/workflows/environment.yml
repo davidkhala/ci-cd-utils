@@ -44,7 +44,7 @@ jobs:
         run: node --version
       - name: go pre-built
         run: go version
-      - run: $(go env GOOS)
+      - run: echo $(go env GOOS)
         shell: bash
       - uses: actions/setup-go@v2
         # When no go versions are set in workflow file, the default version in GitHub hosted runner is used.
