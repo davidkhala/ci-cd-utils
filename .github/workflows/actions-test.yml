@@ -7,5 +7,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Release
-        uses: softprops/action-gh-release@master
+      - uses: softprops/action-gh-release@master
+      - name: ServiceNow CI/CD Instance Scan
+        uses: ./.github/actions/scan
+        with:
+          scantype: full # point, suite_combo, suite_scoped, suite_update
+        env:
+          nowUsername: ${{ secrets.NOW_USERNAME }}
+          nowPassword: ${{ secrets.NOW_PASSWORD }}
+          nowScanInstance: dev128265
