@@ -9,7 +9,8 @@ jobs:
       - uses: actions/checkout@v2
       - uses: softprops/action-gh-release@master
       - name: ServiceNow CI/CD Instance Scan
-        uses: ./.github/actions/scan
+      - name: ServiceNow CI/CD Instance Scan
+        uses: ServiceNow/sncicd-instance-scan@2.0.0
         with:
           scantype: full # point, suite_combo, suite_scoped, suite_update
         env:
