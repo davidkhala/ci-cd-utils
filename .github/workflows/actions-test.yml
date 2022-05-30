@@ -1,13 +1,16 @@
 name: actions-syntax-test
 
 # Controls when the action will run. 
-on: workflow_dispatch
+on: 
+  workflow_dispatch:
+  push:
+    tags:
+    - v*
 jobs:
-  test:
+  ServiceNow:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: softprops/action-gh-release@master
       - name: ServiceNow CI/CD Instance Scan
         uses: ServiceNow/sncicd-instance-scan@2.0.0
         with:
@@ -16,3 +19,10 @@ jobs:
           nowUsername: Admin
           nowPassword: ${{ secrets.NOW_PASSWORD }}
           nowScanInstance: dev128265
+  action-gh-release:
+    runs-on: ubuntu-latest
+    if: startsWith(github.event.ref, 'refs/tags/')
+    steps:
+      - uses: actions/checkout@master
+      - uses: softprops/action-gh-release@master
+    
