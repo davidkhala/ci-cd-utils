@@ -13,6 +13,6 @@ jobs:
         with:
           scantype: full # point, suite_combo, suite_scoped, suite_update
         env:
-          nowUsername: ${{ secrets.NOW_USERNAME }}
+          nowUsername: Admin
           nowPassword: ${{ secrets.NOW_PASSWORD }}
           nowScanInstance: dev128265
