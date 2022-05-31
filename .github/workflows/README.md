@@ -22,7 +22,7 @@
   - Repository tab `Actions` -> Select a workflow (listed at left) -> [Create status badge] button (upper-right of workflow details) -> Event: default
 ### Reusable workflows
 https://docs.github.com/en/actions/using-workflows/reusing-workflows
-- reusable workflows should be referenced at the top-level `jobs.*.uses' key, not within steps
+- reusable workflows should be referenced at the top-level `jobs.*.uses` key, not within steps
 
 
 
