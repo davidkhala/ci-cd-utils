@@ -20,8 +20,14 @@
 
 - Get Badge
   - Repository tab `Actions` -> Select a workflow (listed at left) -> [Create status badge] button (upper-right of workflow details) -> Event: default
+### Reusable workflows
+https://docs.github.com/en/actions/using-workflows/reusing-workflows
+- reusable workflows should be referenced at the top-level `jobs.*.uses' key, not within steps
 
-### Preinstalled software
+
+
+
+### virtual-environments preinstalled software
 Workflow logs include a link to the preinstalled tools on the exact runner. 
 To find this information in the workflow log, 
 1. expand the `Set up job` section. 
