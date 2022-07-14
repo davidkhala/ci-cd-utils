@@ -10,7 +10,7 @@ curl -o actions-runner-linux-x64-2.277.1.tar.gz -L https://github.com/actions/ru
 tar xzf ./actions-runner-linux-x64-2.277.1.tar.gz
 
 # Create the runner and start the configuration experience
-./config.sh --url $1 --token $token
+./config.sh --url $githubUrl --token $token
 # Configuring the self-hosted runner application as a service
 sudo ./svc.sh install
 # Last step, run it!
