@@ -13,6 +13,8 @@ tar xzf ./actions-runner-linux-x64-2.277.1.tar.gz
 ./config.sh --url $githubUrl --token $token
 # Configuring the self-hosted runner application as a service
 sudo ./svc.sh install
+chcon system_u:object_r:usr_t:s0 runsvc.sh # fix SELinux blocking issue 
+
 # Last step, run it!
 sudo ./svc.sh start
 
