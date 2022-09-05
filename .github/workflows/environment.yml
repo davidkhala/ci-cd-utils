@@ -23,6 +23,8 @@ jobs:
         run: echo "CI=${CI};GITHUB_EVENT_NAME=${GITHUB_EVENT_NAME}; ${GITHUB_ACTOR}~=${GITHUB_REPOSITORY_OWNER}; GITHUB_REPOSITORY=${GITHUB_REPOSITORY}"
       - name: use rootless podman
         run: systemctl restart --user podman
+      - name: Use Docker in rootless mode.
+        uses: ScribeMD/rootless-docker@main
           
   viewPrebuiltVersion:
     strategy:
@@ -48,7 +50,7 @@ jobs:
         run: go version
       - run: echo $(go env GOOS)
         shell: bash
-      - uses: actions/setup-go@v2
+      - uses: actions/setup-go@main
         # When no go versions are set in workflow file, the default version in GitHub hosted runner is used.
       - name: after setup Golang
         run: go version
