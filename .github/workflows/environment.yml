@@ -21,6 +21,8 @@ jobs:
         run: echo '${{ toJSON(matrix) }}'
       - name: default environments in https://docs.github.com/en/actions/learn-github-actions/environment-variables
         run: echo "CI=${CI};GITHUB_EVENT_NAME=${GITHUB_EVENT_NAME}; ${GITHUB_ACTOR}~=${GITHUB_REPOSITORY_OWNER}; GITHUB_REPOSITORY=${GITHUB_REPOSITORY}"
+      - name: use rootless podman
+        run: systemctl restart --user podman
           
   viewPrebuiltVersion:
     strategy:
@@ -50,3 +52,4 @@ jobs:
         # When no go versions are set in workflow file, the default version in GitHub hosted runner is used.
       - name: after setup Golang
         run: go version
+  
