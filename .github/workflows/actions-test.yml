@@ -10,7 +10,7 @@ jobs:
   ServiceNow:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@main
       - name: ServiceNow CI/CD Instance Scan
         uses: ServiceNow/sncicd-instance-scan@2.0.0
         with:
@@ -23,6 +23,15 @@ jobs:
     runs-on: ubuntu-latest
     if: startsWith(github.event.ref, 'refs/tags/')
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@main
       - uses: softprops/action-gh-release@master
+  multi-checkout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - uses: actions/checkout@main
+        with:
+          repository: davidkhala/davidkhala
+      - name: TODO list
+        run: ls
     
