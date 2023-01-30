@@ -4,7 +4,7 @@ on: [push, workflow_dispatch]
 env:
   GITHUB_REPOSITORY_NAME: ${{ github.event.repository.name }}
 jobs:
-  contexts_testing: # https://docs.github.com/en/actions/learn-github-actions/contexts#example-printing-context-information-to-the-log
+  view-contexts: # https://docs.github.com/en/actions/learn-github-actions/contexts#example-printing-context-information-to-the-log
     runs-on: ubuntu-latest
     steps:
       - name: Dump GitHub context
@@ -30,7 +30,7 @@ jobs:
         run: systemctl restart --user podman
       - name: Use Docker in rootless mode.
         uses: ScribeMD/rootless-docker@main
-  viewPrebuiltVersion:
+  view-prebuilt-version:
     strategy:
       matrix:
         os: [macos-latest, ubuntu-latest, windows-latest]

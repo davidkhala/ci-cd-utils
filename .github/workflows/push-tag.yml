@@ -4,7 +4,7 @@ on:
     tags:
       - "v*.*.*"
 jobs:
-  
+
   release:
     runs-on: ubuntu-latest
     steps:
@@ -12,4 +12,10 @@ jobs:
       - name: Release
         if: startsWith(github.event.ref, 'refs/tags/')
         uses: softprops/action-gh-release@master
-        
+
+  action-gh-release:
+    runs-on: ubuntu-latest
+    if: startsWith(github.event.ref, 'refs/tags/')
+    steps:
+      - uses: actions/checkout@main
+      - uses: softprops/action-gh-release@master

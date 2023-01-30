@@ -1,0 +1,16 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  ServiceNow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - name: ServiceNow CI/CD Instance Scan
+        uses: ServiceNow/sncicd-instance-scan@2.0.0
+        with:
+          scantype: full # point, suite_combo, suite_scoped, suite_update
+        env:
+          nowUsername: Admin
+          nowPassword: ${{ secrets.NOW_PASSWORD }}
+          nowScanInstance: dev128265

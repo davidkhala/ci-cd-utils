@@ -1,30 +1,14 @@
 name: actions-syntax-test
 
-# Controls when the action will run. 
-on: 
+# Controls when the action will run.
+on:
   workflow_dispatch:
   push:
-    tags:
-    - v*
+
+env:
+  GITHUB_REPOSITORY_NAME: ${{ github.event.repository.name }}
+
 jobs:
-  ServiceNow:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@main
-      - name: ServiceNow CI/CD Instance Scan
-        uses: ServiceNow/sncicd-instance-scan@2.0.0
-        with:
-          scantype: full # point, suite_combo, suite_scoped, suite_update
-        env:
-          nowUsername: Admin
-          nowPassword: ${{ secrets.NOW_PASSWORD }}
-          nowScanInstance: dev128265
-  action-gh-release:
-    runs-on: ubuntu-latest
-    if: startsWith(github.event.ref, 'refs/tags/')
-    steps:
-      - uses: actions/checkout@main
-      - uses: softprops/action-gh-release@master
   multi-checkout:
     runs-on: ubuntu-latest
     steps:
@@ -32,10 +16,8 @@ jobs:
         run: echo "GITHUB_WORKSPACE=${GITHUB_WORKSPACE}"
       - uses: actions/checkout@main
       - name: GITHUB_WORKSPACE, the default location of your repository when using the checkout action.
-        run: echo "GITHUB_WORKSPACE=${GITHUB_WORKSPACE}, assert equals to /home/runner/work/ci-cd-utils/ci-cd-utils"
+        run: echo "GITHUB_WORKSPACE=${GITHUB_WORKSPACE}, assert equals to /home/runner/work/${GITHUB_REPOSITORY_NAME}/${GITHUB_REPOSITORY_NAME}"
       - uses: actions/checkout@main
         with:
           repository: davidkhala/davidkhala
       - run: echo "GITHUB_WORKSPACE=${GITHUB_WORKSPACE}"
-      
-    
