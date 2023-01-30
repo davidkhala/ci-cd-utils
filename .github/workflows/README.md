@@ -20,6 +20,9 @@
 
 - Get Badge
   - Repository tab `Actions` -> Select a workflow (listed at left) -> [Create status badge] button (upper-right of workflow details) -> Event: default
+## Env, Var
+- Variables in the env map cannot be defined in terms of other variables in the map
+
 ### Reusable workflows
 https://docs.github.com/en/actions/using-workflows/reusing-workflows
 - reusable workflows should be referenced at the top-level `jobs.*.uses` key, not within steps
