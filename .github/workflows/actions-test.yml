@@ -29,9 +29,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main
+      - run: echo "GITHUB_ACTION_PATH=${GITHUB_ACTION_PATH}"
       - uses: actions/checkout@main
         with:
           repository: davidkhala/davidkhala
-      - name: TODO list
-        run: ls
+      - run: echo "GITHUB_ACTION_PATH=${GITHUB_ACTION_PATH}"
+      
     
