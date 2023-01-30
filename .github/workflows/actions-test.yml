@@ -28,11 +28,14 @@ jobs:
   multi-checkout:
     runs-on: ubuntu-latest
     steps:
+      - name: GITHUB_WORKSPACE, the default working directory on the runner for steps
+        run: echo "GITHUB_WORKSPACE=${GITHUB_WORKSPACE}"
       - uses: actions/checkout@main
-      - run: echo "GITHUB_ACTION_PATH=${GITHUB_ACTION_PATH}"
+      - name: GITHUB_WORKSPACE, the default location of your repository when using the checkout action.
+        run: echo "GITHUB_WORKSPACE=${GITHUB_WORKSPACE}, assert equals to /home/runner/work/ci-cd-utils/ci-cd-utils"
       - uses: actions/checkout@main
         with:
           repository: davidkhala/davidkhala
-      - run: echo "GITHUB_ACTION_PATH=${GITHUB_ACTION_PATH}"
+      - run: echo "GITHUB_WORKSPACE=${GITHUB_WORKSPACE}"
       
     
