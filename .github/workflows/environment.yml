@@ -1,10 +1,10 @@
 name: pre-install software in GHA runner
 
-# Controls when the action will run. 
+
 on: [push, workflow_dispatch]
 
 jobs:
-  contexts_testing:
+  contexts_testing: # https://docs.github.com/en/actions/learn-github-actions/contexts#example-printing-context-information-to-the-log
     runs-on: ubuntu-latest
     steps:
       - name: Dump GitHub context
