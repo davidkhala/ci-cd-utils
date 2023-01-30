@@ -21,11 +21,13 @@ jobs:
         run: echo '${{ toJSON(matrix) }}'
       - name: default environments in https://docs.github.com/en/actions/learn-github-actions/environment-variables
         run: echo "CI=${CI};GITHUB_EVENT_NAME=${GITHUB_EVENT_NAME}; ${GITHUB_ACTOR}~=${GITHUB_REPOSITORY_OWNER}; GITHUB_REPOSITORY=${GITHUB_REPOSITORY}"
+  container-runtime:
+    runs-on: ubuntu-latest
+    steps:
       - name: use rootless podman
         run: systemctl restart --user podman
       - name: Use Docker in rootless mode.
         uses: ScribeMD/rootless-docker@main
-          
   viewPrebuiltVersion:
     strategy:
       matrix:
