@@ -20,4 +20,5 @@ jobs:
       - uses: actions/checkout@main
         with:
           repository: davidkhala/davidkhala
-      - run: echo "GITHUB_WORKSPACE=${GITHUB_WORKSPACE}"
+      - run: echo "GITHUB_WORKSPACE=${GITHUB_WORKSPACE}, assert not equals to ${PWD}"
+        name: GITHUB_WORKSPACE will not change with multiple checkout
