@@ -2,7 +2,7 @@ name: pre-install software in GHA runner
 
 on: [push, workflow_dispatch]
 env:
-  GITHUB_REPOSITORY_NAME: ${GITHUB_REPOSITORY#*/}  # it will cut all before the / prefix
+  GITHUB_REPOSITORY_NAME: ${{GITHUB_REPOSITORY#*/}}  # it will cut all before the / prefix
 
 jobs:
   contexts_testing: # https://docs.github.com/en/actions/learn-github-actions/contexts#example-printing-context-information-to-the-log
