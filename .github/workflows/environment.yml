@@ -1,7 +1,8 @@
 name: pre-install software in GHA runner
 
-
 on: [push, workflow_dispatch]
+env:
+  GITHUB_REPOSITORY_NAME: ${GITHUB_REPOSITORY#*/}  # it will cut all before the / prefix
 
 jobs:
   contexts_testing: # https://docs.github.com/en/actions/learn-github-actions/contexts#example-printing-context-information-to-the-log
@@ -21,6 +22,8 @@ jobs:
         run: echo '${{ toJSON(matrix) }}'
       - name: default environments in https://docs.github.com/en/actions/learn-github-actions/environment-variables
         run: echo "CI=${CI};GITHUB_EVENT_NAME=${GITHUB_EVENT_NAME}; ${GITHUB_ACTOR}~=${GITHUB_REPOSITORY_OWNER}; GITHUB_REPOSITORY=${GITHUB_REPOSITORY}"
+      - name: self-defined environments
+        run: echo "GITHUB_REPOSITORY_NAME=${GITHUB_REPOSITORY_NAME}"
   container-runtime:
     runs-on: ubuntu-latest
     steps:
@@ -56,4 +59,4 @@ jobs:
         # When no go versions are set in workflow file, the default version in GitHub hosted runner is used.
       - name: after setup Golang
         run: go version
-  
+
