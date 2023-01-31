@@ -38,8 +38,6 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@main
-      - uses: docker-practice/actions-setup-docker@master
-        if: ${{ matrix.os == 'macos-latest' }}
       - name: docker pre-install
         run: docker --version
       - name: mysql pre-install
