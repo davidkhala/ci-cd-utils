@@ -20,5 +20,5 @@ jobs:
       - uses: actions/checkout@main
         with:
           repository: davidkhala/davidkhala
-      - run: echo "GITHUB_WORKSPACE=${GITHUB_WORKSPACE}, assert not equals to ${PWD}"; ls
+      - run: echo "GITHUB_WORKSPACE=${GITHUB_WORKSPACE}, assert not equals to"; /bin/pwd
         name: GITHUB_WORKSPACE will not change with multiple checkout
