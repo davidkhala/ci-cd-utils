@@ -20,15 +20,14 @@
 
 - Get Badge
   - Repository tab `Actions` -> Select a workflow (listed at left) -> [Create status badge] button (upper-right of workflow details) -> Event: default
-## Env, Var
+## Environment, Variables, Path
 - Variables in the env map cannot be defined in terms of other variables in the map
+- Multiple checkout
+  - No matter how many time you `actions/checkout`, the default working directory is always `/home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}`, even checkout other repository. The only different in checkout other repository, are those repository files.
 
 ### Reusable workflows
 https://docs.github.com/en/actions/using-workflows/reusing-workflows
 - reusable workflows should be referenced at the top-level `jobs.*.uses` key, not within steps
-
-
-
 
 ### virtual-environments preinstalled software
 Workflow logs include a link to the preinstalled tools on the exact runner. 
