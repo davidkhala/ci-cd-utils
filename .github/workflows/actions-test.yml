@@ -16,9 +16,9 @@ jobs:
         run: echo "GITHUB_WORKSPACE=${GITHUB_WORKSPACE}"
       - uses: actions/checkout@main
       - name: GITHUB_WORKSPACE, the default location of your repository when using the checkout action.
-        run: echo "GITHUB_WORKSPACE=${GITHUB_WORKSPACE}, assert equals to /home/runner/work/${GITHUB_REPOSITORY_NAME}/${GITHUB_REPOSITORY_NAME}"
+        run: echo "GITHUB_WORKSPACE=${GITHUB_WORKSPACE}, assert equals to /home/runner/work/${GITHUB_REPOSITORY_NAME}/${GITHUB_REPOSITORY_NAME}"; ls
       - uses: actions/checkout@main
         with:
           repository: davidkhala/davidkhala
-      - run: echo "GITHUB_WORKSPACE=${GITHUB_WORKSPACE}, assert not equals to ${PWD}"
+      - run: echo "GITHUB_WORKSPACE=${GITHUB_WORKSPACE}, assert not equals to ${PWD}"; ls
         name: GITHUB_WORKSPACE will not change with multiple checkout
