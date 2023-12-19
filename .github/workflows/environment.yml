@@ -54,7 +54,7 @@ jobs:
         run: go version
       - run: echo $(go env GOOS)
         shell: bash
-      - uses: actions/setup-go@main
+      - uses: actions/setup-go@v4
         with:
           go-version: 'stable'
         # When no go versions are set in workflow file, the default version in GitHub hosted runner is used.
