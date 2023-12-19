@@ -40,6 +40,7 @@ jobs:
       - uses: actions/checkout@main
       - name: docker pre-install
         run: docker --version
+        if: ${{ matrix.os != 'macos-latest' }}
       - name: mysql pre-install
         run: mysql -V
         if: ${{ matrix.os != 'macos-latest' }}
@@ -54,6 +55,8 @@ jobs:
       - run: echo $(go env GOOS)
         shell: bash
       - uses: actions/setup-go@main
+        with:
+          go-version: 'stable'
         # When no go versions are set in workflow file, the default version in GitHub hosted runner is used.
       - name: after setup Golang
         run: go version
