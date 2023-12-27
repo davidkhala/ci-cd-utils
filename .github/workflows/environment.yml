@@ -3,7 +3,7 @@ name: pre-install software in GHA runner
 on: [push, workflow_dispatch]
 env:
   GITHUB_REPOSITORY_NAME: ${{ github.event.repository.name }}
-  HOME: /home/runner/work/
+
 jobs:
   view-contexts: # https://docs.github.com/en/actions/learn-github-actions/contexts#example-printing-context-information-to-the-log
     runs-on: ubuntu-latest
@@ -54,7 +54,7 @@ jobs:
         run: go version
       - run: echo $(go env GOOS)
         shell: bash
-      - uses: actions/setup-go@v4
+      - uses: actions/setup-go@main
         with:
           go-version: 'stable'
         # When no go versions are set in workflow file, the default version in GitHub hosted runner is used.
