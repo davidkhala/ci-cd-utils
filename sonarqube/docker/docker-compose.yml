@@ -1,0 +1,17 @@
+name: sonarqube
+services:
+  sonarqube:
+    container_name: sonarqube
+    environment:
+      - SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true
+    ports:
+      - 9000:9000
+    image: sonarqube:latest
+    volumes:
+      - data:/opt/sonarqube/data:ro # data files, such as the embedded H2 database and Elasticsearch indexes
+      - logs:/opt/sonarqube/logs:ro # contains SonarQube logs about access, web process, CE process, Elasticsearch logs
+      - extensions:/opt/sonarqube/extensions:ro # for 3rd party plugins
+volumes:
+  data:
+  logs:
+  extensions:
