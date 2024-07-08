@@ -54,6 +54,7 @@ jobs:
         run: node --version
       - name: go pre-built
         run: go version
+        if: ${{ matrix.os != 'macos-latest' }}
       - run: echo $(go env GOOS)
         shell: bash
       - uses: actions/setup-go@main
