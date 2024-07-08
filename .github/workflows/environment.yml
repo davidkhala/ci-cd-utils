@@ -46,6 +46,8 @@ jobs:
         if: ${{ matrix.os != 'macos-latest' }}
       - name: java pre-install
         run: java -version
+      - name: Rust (cargo) pre-install
+        run: cargo --version
       - name: python pre-install
         run: python --version
       - name: node pre-built
