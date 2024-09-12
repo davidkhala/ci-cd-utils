@@ -1,6 +1,5 @@
 # Github Workflow
 
-![githubWorkflow.yml](https://github.com/davidkhala/ci-cd-utils/workflows/.github/workflows/githubWorkflow.yml/badge.svg?branch=master)
 
 
 ## Environment, Variables, Path
