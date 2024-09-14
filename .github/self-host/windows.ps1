@@ -9,3 +9,4 @@ if((Get-FileHash -Path actions-runner-win-x64-2.319.1.zip -Algorithm SHA256).Has
 # Extract the installer
 Add-Type -AssemblyName System.IO.Compression.FileSystem ; [System.IO.Compression.ZipFile]::ExtractToDirectory("$PWD/actions-runner-win-x64-2.319.1.zip", "$PWD")
 
+rm actions-runner-win-x64-2.319.1.zip
