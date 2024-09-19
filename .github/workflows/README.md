@@ -25,6 +25,7 @@ Or you can go to some readme collections in source.
 
 
 ### Triggers
-- Manual events
-  - `workflow_dispatch` to trigger specific workflows in a repository
-  - `repository_dispatch` to trigger more than one workflow in a repository and create custom events and event types
+Manual events
+- `workflow_dispatch` to trigger specific workflows in a repository
+  - **Detect default branch only**: if you configure manual workflow from any branches **other than default branch**, it won't show workflow in left panel nor it will show "Run workflow" button to trigger.
+- `repository_dispatch` to trigger more than one workflow in a repository and create custom events and event types
