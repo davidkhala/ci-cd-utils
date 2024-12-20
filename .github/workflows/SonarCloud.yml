@@ -1,10 +1,9 @@
-name: Sonar builds
+name: SonarCloud builds
 on:
   push:
 
 jobs:
-  sonarcloud:
-    name: SonarCloud
+  SonarCloud:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main
