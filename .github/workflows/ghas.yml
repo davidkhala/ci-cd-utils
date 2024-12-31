@@ -35,7 +35,7 @@ jobs:
           path: .github/security/
       - name: Tiny http server moment  # Flat can only use HTTP or SQL, so ... yeah.
         run: |
-          docker run -d -p 8000:80 --read-only -v $(pwd)/nginx-cache:/var/cache/nginx -v $(pwd)/nginx-pid:/var/run -v $(pwd)/.github/security/:/usr/share/nginx/html:ro nginx
+          docker run -d -p 8000:80 --read-only -v $(pwd)/nginx-cache:/var/cache/nginx -v $(pwd)/.github/security/nginx-pid:/var/run -v $(pwd)/.github/security/:/usr/share/nginx/html:ro nginx
           sleep 10
       - name: Flat the code scanning alerts
         uses: githubocto/flat@v3
@@ -47,9 +47,4 @@ jobs:
         with:
           http_url: http://localhost:8000/dependabot_list.csv
           downloaded_filename: .github/security/dependabot_list.csv
-      - name: Flat the secret scanning alerts
-        uses: githubocto/flat@v3
-        with:
-          http_url: http://localhost:8000/secrets_list.csv
-          downloaded_filename: .github/security/secrets_list.csv
 
