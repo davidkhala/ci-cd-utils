@@ -7,6 +7,7 @@ on:
   schedule:
     - cron: '30 22 * * 1'  # Weekly at 22:30 UTC on Mondays
   workflow_dispatch:
+  push: # TODO debug only
 jobs:
   data_gathering:
     runs-on: ubuntu-latest
@@ -39,9 +40,15 @@ jobs:
         uses: githubocto/flat@v3
         with:
           http_url: http://localhost:8000/cs_list.csv
-          downloaded_filename: cs_list.csv
+          downloaded_filename: .github/security/cs_list.csv
+      - name: Flat the dependabot scanning alerts
+        uses: githubocto/flat@v3
+        with:
+          http_url: http://localhost:8000/dependabot_list.csv
+          downloaded_filename: .github/security/dependabot_list.csv
       - name: Flat the secret scanning alerts
         uses: githubocto/flat@v3
         with:
           http_url: http://localhost:8000/secrets_list.csv
-          downloaded_filename: secrets_list.csv
+          downloaded_filename: .github/security/secrets_list.csv
+
