@@ -3,7 +3,7 @@ name: actions-syntax-test
 # Controls when the action will run.
 on:
   workflow_dispatch:
-  push:
+  
 
 env:
   GITHUB_REPOSITORY_NAME: ${{ github.event.repository.name }}
