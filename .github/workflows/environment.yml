@@ -7,6 +7,9 @@ env:
 
 jobs:
   view-contexts: # https://docs.github.com/en/actions/learn-github-actions/contexts#example-printing-context-information-to-the-log
+    permissions:
+      contents: read
+      pull-requests: write
     runs-on: ubuntu-latest
     steps:
       - name: Dump GitHub context
