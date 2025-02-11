@@ -6,6 +6,13 @@ env:
   GITHUB_REPOSITORY_NAME: ${{ github.event.repository.name }}
 
 jobs:
+  view-windows:
+    runs-on: windows-latest
+    steps:
+      - name: default environments
+        run: 'Get-ChildItem Env:'
+        shell: powershell
+   
   view-contexts: # https://docs.github.com/en/actions/learn-github-actions/contexts#example-printing-context-information-to-the-log
     permissions:
       contents: read
