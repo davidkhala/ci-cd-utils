@@ -1,7 +1,7 @@
 name: pre-install software in GHA runner
 
 on: 
-  workflow_dispatch:
+  push:
 env:
   GITHUB_REPOSITORY_NAME: ${{ github.event.repository.name }}
 
@@ -55,6 +55,9 @@ jobs:
         run: cargo --version
       - name: python pre-install
         run: python --version
+      - name: python location
+        run: which python
+        if: ${{ matrix.os != 'macos-latest' }}
       - name: node pre-built
         run: node --version
       - name: go pre-built
