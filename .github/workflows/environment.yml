@@ -57,7 +57,7 @@ jobs:
         run: python --version
       - name: python location
         run: which python
-        if: ${{ matrix.os != 'macos-latest' }}
+        if: ${{ matrix.os != 'windows-latest' }}
       - name: node pre-built
         run: node --version
       - name: go pre-built
