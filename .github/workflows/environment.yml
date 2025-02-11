@@ -35,13 +35,7 @@ jobs:
         run: echo "CI=${CI};GITHUB_EVENT_NAME=${GITHUB_EVENT_NAME}; ${GITHUB_ACTOR}~=${GITHUB_REPOSITORY_OWNER}; GITHUB_REPOSITORY=${GITHUB_REPOSITORY}"
       - name: self-defined environments
         run: echo "GITHUB_REPOSITORY_NAME=${GITHUB_REPOSITORY_NAME}"
-  container-runtime:
-    runs-on: ubuntu-latest
-    steps:
-      - name: use rootless podman
-        run: systemctl restart --user podman
-      - name: Use Docker in rootless mode.
-        uses: ScribeMD/rootless-docker@main
+  
   view-prebuilt-version:
     strategy:
       matrix:
