@@ -12,6 +12,7 @@ jobs:
       - name: default environments
         run: 'Get-ChildItem Env:'
         shell: powershell
+      - run: bcp -v
    
   view-contexts: # https://docs.github.com/en/actions/learn-github-actions/contexts#example-printing-context-information-to-the-log
     permissions:
